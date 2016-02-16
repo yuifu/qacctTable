@@ -25,6 +25,12 @@ for line in eachline(STDIN)
 end
 
 if length(vars) > 0
+	if c == 0
+				println(STDOUT, "| " * join(vars, " | ") * " |")
+				println(STDOUT, "|" * repeat("--|", length(vars)))
+				c += 1
+	end
+
 	println(STDOUT, "| " * join(vals, " | ") * " |")
 
 	empty!(vars)
